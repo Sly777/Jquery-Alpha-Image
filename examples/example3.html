@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jquery . Alphaimage - v.1.0.0 . Example 3</title>
+</head>
+<body>
+    <h1>Jquery . Alphaimage - v.1.0.0 . Example 3</h1>
+    <h3>by <a href="http://ilkerguller.com" target="_blank">Ilker Guller</a></h3>
+
+    <code>
+        $(document).ready(function (){
+            $('.alphaImage').alphaimage({
+                colour: "#9CDAF0",
+                onlyData: true,
+                onComplete: function(result) {
+                    console.log(result);
+                }
+            });
+        });
+    </code><br><br>
+
+    <img class="alphaImage" src="Octocat.png" />
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+    <script src="../src/jquery.alphaimage.js"></script>
+    <script>
+        $(document).ready(function (){
+            $('.alphaImage').alphaimage({
+                colour: "#9CDAF0",
+                onlyData: true,
+                onComplete: function(result) {
+                    console.log(result);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

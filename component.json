@@ -1,0 +1,10 @@
+{
+    "name": "Jquery-Alpha-Image",
+    "version": "1.0.0",
+    "homepage": "https://ilkerguller.com",
+    "description": "This plugin can change selected colours to transparent and give result as image or imagedata. This plugin works IE9+, Chrome, Firefox, Safari.",
+    "main": "src/jquery.alphaimage.js",
+    "dependencies": {
+        "jquery": "~1.6.0"
+    }
+}
