@@ -12,12 +12,13 @@
     <script type="text/javascript" src="javascripts/modernizr.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript" src="javascripts/jquery.alphaimage.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-        $('#main_content').headsmart()
+        $('#main_content').headsmart();
       })
     </script>
-    <title>Jquery-alpha-image by Sly777</title>
+    <title>Jquery Alpha Image by Ilker Guller</title>
   </head>
 
   <body>
@@ -27,8 +28,8 @@
       <header>
         <span class="ribbon-outer">
           <span class="ribbon-inner">
-            <h1>Jquery-alpha-image</h1>
-            <h2>This plugin can change selected colours to transparent and give result as image or imagedata. This plugin works IE9+, Chrome, Firefox, Safari.</h2>
+            <h1>Jquery Alpha Image</h1>
+            <h2>This plugin can change selected colours to transparent on your image and give result as image or imagedata. This plugin works on IE9+, Chrome, Firefox, Safari.</h2>
           </span>
           <span class="left-tail"></span>
           <span class="right-tail"></span>
@@ -83,6 +84,54 @@
 <h2>Author</h2>
 
 <p>Ilker Guller (<a href="http://ilkerguller.com" title="http://ilkerguller.com">http://ilkerguller.com</a>)</p>
+
+<h2>Examples</h2>
+
+<h5>Example 1 with HEX Code</h5>
+
+<pre>
+    $(document).ready(function (){
+        $('.example1').alphaimage({
+            colour: "#9CDAF0"
+        });
+    });
+</pre>
+
+<img src="images/Octocat_full.png" class="example1" width="450" height="374" />
+
+<br/><br/><hr/>
+
+<h5>Example 2 with RGB Code</h5>
+
+<pre>
+    $(document).ready(function (){
+        $('.example2').alphaimage({
+            colour: "32,31,31"
+        });
+    });
+</pre>
+
+<img src="images/Octocat_full.png" class="example2" width="450" height="374" />
+
+<br/><br/><hr/>
+
+<h5>Example 3</h5>
+
+<pre>
+    $(document).ready(function (){
+        $('.example3').alphaimage({
+            colour: "#9CDAF0",
+            onlyData: true,
+            onComplete: function(result) {
+                console.log(result);
+            }
+        });
+    });
+</pre>
+
+<img src="images/Octocat_full.png" class="example3" width="450" height="374" />
+
+<br/><br/><hr/>
 
 <h2>For Issues, New Features</h2>
 
@@ -142,11 +191,30 @@ along with this program.  If not, see <a href="http://www.gnu.org/licenses/">htt
           <span class="right-tail"></span>
         </span>
         <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <p>Page edited by Sly777</p>
         <span class="octocat"></span>
       </footer>
 
     </div>
 
-    
+    <script type="text/javascript">
+      $(document).ready(function (){
+        $('.example1').alphaimage({
+            colour: "#9CDAF0"
+        });
+
+        $('.example2').alphaimage({
+            colour: "32,31,31"
+        });
+
+        $('.example3').alphaimage({
+            colour: "#9CDAF0",
+            onlyData: true,
+            onComplete: function(result) {
+                console.log(result);
+            }
+        });
+      });
+    </script>
   </body>
 </html>
